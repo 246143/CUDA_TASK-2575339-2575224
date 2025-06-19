@@ -55,7 +55,7 @@ int main() {
     cudaMemcpy(d_input, h_input, size, cudaMemcpyHostToDevice);
 
     // Define block and grid dimensions
-    dim3 blockSize(2, 2); // Each block has 2x2 = 4 threads
+    dim3 blockSize(4, 4); // 
     dim3 gridSize((N + 1) / 2, (N + 1) / 2); // Enough blocks to cover N x N matrix
 
     // Launch the CUDA kernel
